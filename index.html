@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Modal window maker</title>
+
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+
+  <body mode="maker">
+    <header class="mdl-color--cyan-500">
+      <button class="instructions mdl-button" id="instructions">
+        Instructions
+      </button>
+      <h1 class="mode-maker">Modal Window Maker</h1>
+      <h1 class="mode-edit mode-blockly">Modal Window Maker Configuration</h1>
+    </header>
+    <div class="instruction-content instruction-content-hidden">
+      <p>
+        This is a simple activity with use of Blockly library's Custom blocks.
+        <br />Here use can use the blocks to make a Custom Modal window,by
+        giving inputs for text,color & other properties to content.<br />
+        Also for use can play around by adding the random block which works with
+        color & height-width property.<br />
+        Note:The Create Modal block is necesarry for modal to be displayed
+        without it the other block wont do their work.
+      </p>
+    </div>
+    <main>
+      <button class="mode-maker mdl-button" id="edit">Edit</button>
+      <button class="mode-edit mdl-button mdl-js-button" id="done">Done</button>
+      <button class="mode-blockly mdl-button mdl-js-button" id="save">
+        Save
+      </button>
+      <p class="hint mode-edit">
+        Tap the button to edit codespace. <br />When complete, press Done.
+      </p>
+
+      <div class="maker">
+        <div>
+          <div class="button mdl-color--amber-500 mode-maker">
+            Click here to run the code
+          </div>
+          <div class="button mdl-color--amber-500 mode-edit">
+            Click here to edit the code
+          </div>
+        </div>
+      </div>
+      <!-- style="height: 540px; width: 400px" -->
+      <div class="blockly-editor">
+        <div id="blocklyDiv" style="height: 540px; width: 400px"></div>
+      </div>
+    </main>
+    <div class="display-result">
+      <div id="displayResult" style="height: 600px; width: 600px">
+        <!-- To be manipulated by code generator -->
+        <div class="modal-window">
+          <span class="close--modal">&times;</span>
+          <p class="modal_heading_text">Default</p>
+          <div class="modal-content">Modal content</div>
+        </div>
+      </div>
+      >
+    </div>
+    <script src="https://unpkg.com/blockly"></script>
+    <script src="scripts/custom_blocks.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
